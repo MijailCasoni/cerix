@@ -1,0 +1,412 @@
+{% extends 'template.html' %}
+
+{% block tittle%}Home
+{% endblock %}
+
+{%block body%}
+<main class="main">
+  <!--HOME-->
+  <section class="home container mt-5" id="home">
+    <div class="swiper home-swiper">
+      <div class="swiper-wrapper">
+        <section class="swiper-slide">
+          <div class="homecont row align-items-center">
+            <div class="col-md-6 homedata">
+              <h1 class="hometitle">
+                CERIX <br />Seguridad <br />TECNOLOGIA E INNOVACION!!
+              </h1>
+              <p class="homedes">
+                Con mas de 15 años en el área de seguridad y tecnología
+              </p>
+              <div class="homebut">
+                <a href="#products" class="btn btn-primary">Servicio</a>
+                <a href="#" class="btn btn-primary">Productos</a>
+              </div>
+            </div>
+
+            <div class="col-md-6 homegroup text-center">
+              <img src="{{url_for('static', filename='img/logo1.png')}}" alt="" class="homeimg img-fluid" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!--CATEGORY-->
+  <section class="section category container mt-5">
+    <h2 class="sectiontitle text-center mb-5">
+      Los mejores <br />
+      servicios para tu empresa y hogar
+    </h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card categorydata h-100">
+          <img src="{{url_for('static', filename='img/cerix1.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body ">
+            <h3 class="categorytitle">SIENTE VERDADERA SEGURIDAD</h3>
+            <p class="categorydescription">
+              Tenemos nuestro personal capacitado y entrenado para
+              resguardar el recinto planificado, realizando ciertos
+              protocolos de seguridad en la jornada, enlazado con una
+              central de Circuito cerrado por Televisión, Radio Transmisor y
+              conexión directa al Alpha 3 y OS 10 de Carabineros de Chile.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card categorydata h-100">
+          <img src="{{url_for('static', filename='img/cerix2.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h3 class="categorytitle">PROTEGE TUS COSAS DE VALOR</h3>
+            <p class="categorydescription">
+              Por supuesto, esta es una de las razones más importantes para
+              obtener un sistema de seguridad. Puede que tengas muchas cosas
+              valiosas en tu casa, como joyas, aparatos electrónicos y otras
+              cosas. Con un sistema de seguridad para el hogar o empresa,
+              podrás proteger tus objetos de valor.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card categorydata h-100">
+          <img src="{{url_for('static', filename='img/cerix3.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h3 class="categorytitle">PARA TU TRANQUILIDAD</h3>
+            <p class="categorydescription">
+              El mayor beneficio de tener un sistema de seguridad es la
+              tranquilidad de que tu casa o tu negocio está en buenas manos.
+              Esto puede ayudarte a estar más saludable, productivo y
+              atento, ya que no te distraerás cuando estés en la oficina o
+              dormir con preocupación del que podría pasarle a tu empresa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--ABOUT-->
+  <section class="section about mt-5" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{{url_for('static', filename='img/cerix4.png')}}" alt="" class="aboutimg img-fluid" />
+        </div>
+        <div class="col-md-6">
+          <h2 class="sectiontitle abouttitle">SOBRE <br/>NOSOTROS</h2>
+          <p class="aboutdescription">
+            En <b>CERIX</b>, somos líderes en seguridad privada, dedicados a
+            proteger lo que más valoras. Con mas de 15 años de experiencia y
+            un equipo altamente capacitado contando con certificación en
+            OS-10 y ALPHA-3 ofrecemos soluciones personalizadas para
+            empresas y particulares. Nos especializamos en vigilancia,
+            protección de bienes, seguridad electrónica y servicios de
+            escolta. Nuestro compromiso es brindar tranquilidad y confianza
+            a nuestros clientes, utilizando tecnología de punta y
+            estrategias proactivas. En <b>CERIX</b>, tu seguridad es nuestra
+            prioridad.
+          </p>
+          <a href="{{url_for('main.form')}}" class="btn btn-primary">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--SERVICIOS-->
+  <section class="section product container mt-5" id="servicios">
+    <h2 class="sectiontitle text-center mb-5" id="products">Servicios</h2>
+
+    <div class="row" >
+      <div class="col-md-4 mb-4" id="serv-guardia">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/cerix7.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Guardia Virtual</h3>
+            <p class="productsubtitle">
+              Instalamos cámaras de vigilancia acompañadas de altoparlantes,
+              sirenas y balizas en los lugares por proteger de su empresa o
+              domicilio monitoreado por nuestra central cerix.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" id="serv-ver">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/cerix6.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Móvil de Verificación</h3>
+            <p class="productsubtitle">
+              Es el personal capacitado para dirigirse al recinto donde
+              verifica el estatus de la instalación u hogar del cliente para
+              corroborar que se encuentre seguro.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" id="serv-cam">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/cerix8.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Instalación de Cámaras</h3>
+            <p class="productsubtitle">
+              Entrega, instalación, reparación, mantenimiento y venta de
+              cámaras, CCTV, sensores infrarrojos, cámaras termales, cercos
+              eléctricos, sensores y controles de acceso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Tecnologías-->
+  <section class="section product container mt-5" id="product">
+    <h2 class="sectiontitle text-center mb-5" id="products">Tecnologías y Productos</h2>
+
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/cameraB.jpg')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Cámara tipo bullet</h3>
+            <p class="productsubtitle">
+              Contamos con cámaras con excelentes características tales como alta resolución, gran alcance, 
+              enfoque automático y una variedad de formatos que permiten la adaptabilidad multiplataforma.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/Sirena-con-baliza.jpg')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Sirena con baliza</h3>
+            <p class="productsubtitle">
+              Sirena con baliza, posee un sonido muy potente capaz de disuadir de forma eficaz, además es resistente 
+              a las condiciones climáticas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/camera-domo.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Cámara tipo domo</h3>
+            <p class="productsubtitle">
+              Contamos con cámaras con excelentes características tales como alta resolución, gran alcance, 
+              enfoque automático y una variedad de formatos que permiten la adaptabilidad multiplataforma.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/altavoz-2.jpg')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Altavoz</h3>
+            <p class="productsubtitle">
+              Altavoz con elevada potencia permitiendo así un largo alcance. Adecuado para el uso disuasivo en recintos. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/amplificador.jpg')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Amplificador</h3>
+            <p class="productsubtitle">
+              Equipo especializado para brindar la potencia necesaria para disuadir en el perímetro.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/DVR.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">XVR/DVR</h3>
+            <p class="productsubtitle">
+              Xvr/dvr tiene características que facilitan el monitoreo, su software permite la detección del movimiento, 
+              compatibilidad con múltiples formatos de cámaras y es el medio por el cual se logra una comunicación nítida 
+              al momento de disuadir por voceo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/PTZ-dahua.png')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Cámara tipo PTZ</h3>
+            <p class="productsubtitle">
+              En Cerix, contamos con cámaras de seguridad PTZ optimizadas para aplicaciones de vigilancia importantes, 
+              con una calidad de imagen superior, análisis avanzado, velocidad de giro 360°, entre otras grandes características.
+            </p>
+          </div>
+        </div>
+      </div>  
+      <div class="col-md-3 mb-3">
+        <div class="card productcontent h-100">
+          <img src="{{url_for('static', filename='img/stafix.jpg')}}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h3 class="producttitle">Stafix energizador</h3>
+            <p class="productsubtitle">
+              Nuestro energizador posee una excelente potencia capaz de otorgar voltaje sin inconveniente a grandes recintos,
+              adicional a esto el cerco puede ser conectado y monitoreo por la central.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--CLIENTES-->
+  <section class="section mt-5" id="new">
+    <div class="container">
+      <h2 class="sectiontitle text-center mb-5">Nuestros Clientes</h2>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="1"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="2"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="3"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="4"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="5"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="6"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="7"
+          ></li>
+        </ol>
+        <div class="carousel-inner active">
+          <div class="carousel-item active">
+            <img
+              src="{{url_for('static', filename='img/stafix.jpg')}}img/client-ajhua.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{url_for('static', filename='img/client-bosch.png')}}"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static', filename='img/client-dsc.png')}}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{url_for('static', filename='img/client-inim.png')}}"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{url_for('static', filename='img/client-jaboltron.png')}}"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static', filename='img/client-jva.png')}}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{url_for('static', filename='img/client-nice.jpg')}}"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{url_for('static', filename='img/client-ubiquiti.png')}}"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--CORREO-->
+
+  <section class="section newsletter">
+    <div class="newslc container">
+      <h2 class="sectiontitle">Newsletter</h2>
+      <p class="newsld">
+        Infómate de todas las novedades que tenemos para resguardar tu
+        seguridad¡
+      </p>
+
+      <form action="" class="newslf">
+        <input type="text" placeholder="Correo" class="newslin" />
+        <button class="button2">Subscribete</button>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock %}

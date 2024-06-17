@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" src="{{url_for('static', filename='img/logo1.png')}}" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+
+    <title>Cerix</title>
+    <style>
+      .navbar-custom {
+        background-color: rgba(175, 171, 193, 0.8); /* Fondo blanco semitransparente */
+        transition: background-color 0.5s ease; /* Transición suave */
+      }
+
+      .navbar-custom, .nav-link {
+        color: #fbf8f8; /* Color del texto */
+      }
+
+      .navbar-custom, .navbar-brand, .productsubtitle {
+        color: #fff; /* Color del texto de la marca */
+      }
+
+      .navbar-custom .navbar-toggler-icon {
+        filter: invert(100%); /* Hacer el icono del toggler blanco */
+      }
+
+      /* Cambiar el fondo de la barra de navegación al hacer scroll */
+      .navbar-scrolled {
+        background-color: rgba(26, 5, 120, 0.9);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      }
+
+      /* Estilos para los botones en la barra de navegación */
+      .nav-link.active {
+        font-weight: bold; /* Negrita para el enlace activo */
+      }
+      .home .homecont {
+        display: flex;
+        align-items: center;
+      }
+      .home .homecont .homedata {
+        flex: 1;
+      }
+      .home .homecont .homegroup {
+        flex: 1;
+        text-align: center;
+      }
+      .home .homecont .homegroup img {
+        max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
+      }
+
+      .categorydata, .card-body, .categorytitle{
+        color: black;
+        background-color: rgba(56, 94, 233, 0.8); /* Color negro para el texto */
+      }
+
+      .carousel-inner {
+        width: 50%; /* Ajusta el tamaño del carrusel */
+        height: auto;
+        margin: auto; /* Centra el carrusel horizontalmente */
+        display: block;
+
+      }
+      .carousel-item {
+        width: 100%; /* Asegura que las imágenes llenen el contenedor del carrusel */
+        height: auto; /* Mantiene las proporciones de las imágenes */
+      }
+
+      .formu-1{
+        padding-top: 50px;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="header" id="header">
+      <nav
+        class="navbar navbar-expand-lg navbar-light container navbar-custom fixed-top"
+      >
+        <a href="{{url_for('main.index')}}" class="navbar-brand">
+          <img src="{{ url_for('static', filename='img/logo1.png') }}" alt="favicon" class="navL-img" />
+          CERIX
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="{{url_for('main.index')}}" class="nav-link active">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="#servicios" class="nav-link">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a href="#products" class="nav-link">Tecnología</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{url_for('main.form')}}" class="nav-link">Soporte</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    {% block body%}
+    {% endblock %}
+    <!--FOOTER-->
+
+    <footer class="footer section">
+      <div class="footercontainer container grid">
+        <div class="footercontent">
+          <a href="#" class="footerL">
+            <img src="{{url_for('static', filename='img/favicon.png')}}" alt="" class="footerL-img" />
+            CERIX
+          </a>
+
+          <p class="footerdescription">
+            En Cerix, nos dedicamos a ofrecer soluciones integrales de seguridad para proteger lo que más valoras. 
+            <br />Con tecnología de punta y un equipo de expertos, garantizamos tu tranquilidad.
+          </p>
+          <p></p>
+
+          <div class="footersocial">
+            <h5>Síguenos¡</h5>
+            <a
+              href="https://www.facebook.com/profile.php?id=100063657410037"
+              target="_blank"
+              class="footersocial-link"
+            >
+              <i class="bx bxl-facebook"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/cerixvigilancia/?hl=es"
+              target="_blank"
+              class="footersocial-link"
+            >
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footercontent">
+          <h3 class="footertitle">Servicios</h3>
+
+          <ul class="footerlinks">
+            <li>
+              <a href="#serv-guardia" class="footerlink">Guardia Virtual</a>
+            </li>
+
+            <li>
+              <a href="#serv-ver" class="footerlink">Móvil de Verificación</a>
+            </li>
+
+            <li>
+              <a href="#serv-cam" class="footerlink">Instalación de sistemas de vigilancia</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footercontent">
+          <h3 class="footertitle">Noticias sobre seguridad</h3>
+
+          <ul class="footerlinks">
+            <li>
+              <a href="https://www.gob.cl/noticias/chile-tiene-nueva-ley-de-seguridad-privada-sepa-como-funcionara-la-normativa/" class="footerlink">
+                Nueva Ley de seguridad Privada
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.latercera.com/opinion/noticia/preocupaciones-en-torno-al-reglamento-de-seguridad-privada/X2276GCWVVCLJDXOHQ7JQNKLYA/" class="footerlink">
+                La seguridad en los medios
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.zosepcar.cl/" class="footerlink">
+                Seguridad privada y Carabineros
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footercontent">
+          <h3 class="footertitle">Nosotros</h3>
+
+          <ul class="footerlinks">
+            <li>
+              <a href="#" class="footerlink"></a>
+            </li>
+
+            <li>
+              <a href="#" class="footerlink">Certificaciones que nos avalan</a>
+            </li>
+
+            <li>
+              <a href="#" class="footerlink">Conoce nuestro equipo de profesionales de la seguridad</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footerdate">
+        <span class="footercopy">&copy; Copyright Benito Argel Suazo-Cerix 2024</span>
+
+        <span class="footerphone">Cerix Holding – 432-315239 / 432-235350</span>
+
+        <span class="footerdirect">Lynch 150, Los Angeles, Chile</span>
+      </div>
+    </footer>
+
+    <!--FOOTER-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollupicon"></i>
+    </a>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
